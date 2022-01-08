@@ -1,0 +1,14 @@
+<% include ('./header') %> 
+    <p>testing</p>
+    <form action="/", method="post">
+        <p>Sign in</p>
+        <% if (locals.flash && locals.flash.erreur) { %>
+         <p><%= flash.erreur %></p>
+        <% } %>
+        <textarea name="username" id="test_id" cols="15" rows="1"></textarea>
+        <p></p>
+        <textarea name="password" id="test_id" cols="15" rows="1"></textarea>
+        <p></p>
+        <button type="submit">submit</button>
+    </form>
+<% include ('./footer') %> 

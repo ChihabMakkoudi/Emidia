@@ -1,0 +1,16 @@
+<% include ('./header') %> 
+    <p>Connected Users</p>
+    <p>_______________</p>
+    <% connectedUsers.forEach(element => { %>
+        <p>user : <%= element %></p>
+    <% }) %>
+    <p>Posts :</p>
+    <p>_______</p>
+    <% PostList.forEach(element => { %>
+        <p>post : <%= element.likesCount %></p>
+    <% }) %>
+    <form action="/disconect", method="post">
+        <button type="submit">logout</button>
+    </form>
+    <p>end of page</p>
+<% include ('./footer') %> 
